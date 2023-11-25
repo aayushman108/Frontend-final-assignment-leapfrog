@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 24px;
+}
+
+body {
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+
+h1 {
+  font-size: 2rem;
+}
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 1rem;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: #17C2EC;
+}
+
+.container {
+  max-width: 1300px;
+  padding: 0 70px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 992px) {
+  .container {
+    padding: 0 50px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 0 35px;
+  }
+}
+
+.header {
+  border: 2px solid black;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header__main {
+  border: 1px solid blue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.header__main .header__logo-link {
+  position: relative;
+  font-size: 32px;
+}
+.header__main .header__logo-link:hover {
+  color: inherit;
+}
+.header__main .header__logo-link::before {
+  content: "";
+  width: 100px;
+  height: 3px;
+  background-color: #17C2EC;
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+.header__main .header__links-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: row;
+  border: 1px solid black;
+  gap: 25px;
+}
+.header__main .header__links .header__link {
+  font-size: 1rem;
+}
+.header__main .header__links .header__link--active {
+  position: relative;
+  font-weight: 700;
+}
+.header__main .header__links .header__link--active:hover {
+  color: inherit;
+}
+.header__main .header__links .header__link--active::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #17C2EC;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 0);
+}
+.header__main .header__button-status {
+  border-radius: 20px;
+  padding: 20px 25px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+}
+.header__main .header__button-status--secondary {
+  background-color: rgba(196, 196, 196, 0.1);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #17C2EC;
+}
+
+/*# sourceMappingURL=styles.css.map */

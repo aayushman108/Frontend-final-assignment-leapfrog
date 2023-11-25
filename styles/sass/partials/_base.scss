@@ -1,0 +1,31 @@
+html{
+    font-size: 24px;
+}
+
+body{
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+h1{
+    font-size: 2rem;
+    @media screen and (max-width: $tablet) {
+        font-size: 1.5rem;
+    }
+    @media screen and (max-width: $mobile) {
+        font-size: 1rem;
+    }
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: $secondary-color;
+    &:hover{
+        color: $primary-color;
+    }
+}
