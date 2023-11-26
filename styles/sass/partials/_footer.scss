@@ -1,0 +1,89 @@
+
+
+.footer{
+    @include background-image;
+    height: 500px;
+    @include mobile{
+        height: 381px;
+    }
+    &__main{
+        &-newsletter{
+            width: 1067px;
+            height: 435px;
+            margin: 0 auto;
+            border: 2px solid red;
+        }
+        &-links{
+            margin-top: 328px;
+            @include d-flex(space-between, row);
+            align-items: center;
+            @include tablet{
+                margin-top: 270px;
+                @include d-flex(flex-start, column);
+                align-items: flex-start; 
+                gap: 40px;
+            }
+            @include mobile{
+                margin-top: 133px;
+                gap: 0;
+            }
+            .footer-logo{
+                font-size: 1.33rem;
+                color: $white;
+                font-weight: 700;
+                position: relative;
+                @include tablet{
+                    font-size: 1.083rem;
+                }
+                @include mobile{
+                    margin-bottom: 30px;
+                    font-size: 0.75rem;
+                }
+                &::before{
+                    position: absolute;
+                    content: "";
+                    width: 100px;
+                    height: 3px;
+                    background-color: $primary-color;
+                    top: calc(100% + 5px);
+                    left: 0;
+                }
+            }
+            .footer-links{
+                @include d-flex(flex-start, row);
+                gap: 25px;
+                @include mobile{
+                    @include d-flex(flex-start, column);
+                    gap: 0;
+                    margin-bottom: 20px;
+                }
+                &__item{
+                    margin-bottom: 0;
+                    font-size: 1rem;
+                    @include tablet{
+                        font-size: 0.833rem;
+                    }
+                    @include mobile{
+                        font-size: 0.583rem;
+                    }
+                    &--active{
+                        color: $white;
+                        font-weight: 700;
+                    }
+                }
+            }
+            .social-links{
+                @include d-flex(flex-start, row);
+                gap: 10px;
+                &__item{
+                    .bi{
+                        font-size: 1rem;
+                        @include mobile{
+                            font-size: 0.75rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -14,9 +14,7 @@
             position: relative;
             font-size: 1.33rem;
             font-weight: 700;
-            &:hover{
-                color: $white;
-            }
+            color: white;
             &::before{
                 content: "";
                 width: 100px;
@@ -24,7 +22,7 @@
                 background-color: $primary-color;
                 position: absolute;
                 left: 0;
-                top: 100%;
+                top: calc(100% + 5px);
             }
         }
         
@@ -41,9 +39,7 @@
                 &--active{
                     position: relative;
                     font-weight: 700;
-                    &:hover{
-                        color: $white;
-                    }
+                    color: $white;
                     &::before{
                         content: "";
                         width: 10px;

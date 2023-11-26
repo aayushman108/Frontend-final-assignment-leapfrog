@@ -1,8 +1,8 @@
 
 
 .feedback{
-    //@include background-image;
-    background-image: url("/assets/feedback-bg.png") lightgray 50%  / cover no-repeat;
+    @include background-image;
+    background-image: url("/assets/feedback-bg.png");
     .feedback__main{
         text-align: center;
         &-title{
