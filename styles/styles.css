@@ -29,12 +29,6 @@ body {
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
   position: relative;
-  background-image: url("/assets/hero-bg-image.png");
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-repeat: repeat-y;
-  background-position: center;
 }
 
 h1 {
@@ -115,7 +109,7 @@ a:hover {
   font-weight: 700;
 }
 .header__main .header__links .header__link--active:hover {
-  color: inherit;
+  color: #FFF;
 }
 .header__main .header__links .header__link--active::before {
   content: "";
@@ -174,6 +168,7 @@ a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  z-index: -2;
 }
 .banner .banner__main {
   padding-top: 210px;
@@ -342,6 +337,7 @@ a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  z-index: -2;
 }
 @media screen and (max-width: 1200px) {
   .vaccination-promo {
@@ -666,6 +662,7 @@ a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  z-index: -2;
   padding: 70px 30px 0 30px;
   text-align: center;
 }
@@ -738,6 +735,203 @@ a:hover {
 .covid-prevention__image img {
   width: 100%;
   height: auto;
+}
+
+.feedback {
+  background-image: url("/assets/feedback-bg.png") lightgray 50%/cover no-repeat;
+}
+.feedback .feedback__main {
+  text-align: center;
+}
+.feedback .feedback__main-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #17C2EC;
+  padding: 57px 0 20px;
+}
+@media screen and (max-width: 1200px) {
+  .feedback .feedback__main-title {
+    padding: 46px 0 20px;
+    font-size: 0.833rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .feedback .feedback__main-title {
+    padding: 30px 0 20px;
+    font-size: 0.583rem;
+  }
+}
+.feedback .feedback__main-heading {
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .feedback .feedback__main-heading {
+    margin-bottom: 10px;
+  }
+}
+.feedback .feedback__main-description {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+  width: 66%;
+  margin: 0 auto 100px;
+}
+@media screen and (max-width: 1200px) {
+  .feedback .feedback__main-description {
+    font-size: 0.75rem;
+    margin-bottom: 60px;
+    width: 75%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .feedback .feedback__main-description {
+    font-size: 0.5rem;
+    margin-bottom: 16px;
+    width: 66%;
+  }
+}
+.feedback .feedback__main-client {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-bottom: 320px;
+}
+@media screen and (max-width: 1200px) {
+  .feedback .feedback__main-client {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 160px;
+  }
+}
+.feedback .feedback__main-client .feedback-item {
+  max-width: 32%;
+  min-height: 250px;
+  position: relative;
+  border: none;
+  background-color: rgba(196, 196, 196, 0.5);
+  border-radius: 20px;
+  padding: 28px;
+}
+@media screen and (max-width: 1200px) {
+  .feedback .feedback__main-client .feedback-item {
+    max-width: 400px;
+    align-self: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .feedback .feedback__main-client .feedback-item {
+    max-width: 305px;
+    min-height: 190px;
+  }
+}
+.feedback .feedback__main-client .feedback-item::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 294px;
+  height: 478px;
+  background-image: url("/assets/covid-vaccine.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: visible;
+}
+@media screen and (max-width: 1200px) {
+  .feedback .feedback__main-client .feedback-item::before {
+    width: 170px;
+    height: 280px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .feedback .feedback__main-client .feedback-item::before {
+    width: 124px;
+    height: 200px;
+  }
+}
+.feedback .feedback__main-client .feedback-item--highlight {
+  background-color: #17C2EC;
+}
+.feedback .feedback__main-client .feedback-item__client {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .feedback .feedback__main-client .feedback-item__client {
+    gap: 16px;
+  }
+}
+.feedback .feedback__main-client .feedback-item__client-image {
+  width: 70px;
+  height: 70px;
+}
+@media screen and (max-width: 768px) {
+  .feedback .feedback__main-client .feedback-item__client-image {
+    width: 53px;
+    height: 53px;
+  }
+}
+.feedback .feedback__main-client .feedback-item__client-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.feedback .feedback__main-client .feedback-item__client-intro {
+  text-align: left;
+}
+.feedback .feedback__main-client .feedback-item__client-intro .client-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000;
+}
+.feedback .feedback__main-client .feedback-item__client-intro .client-name--highlight {
+  color: #FFF;
+}
+@media screen and (max-width: 768px) {
+  .feedback .feedback__main-client .feedback-item__client-intro .client-name {
+    font-size: 0.583rem;
+  }
+}
+.feedback .feedback__main-client .feedback-item__client-intro .client-address {
+  font-size: 0.583rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+.feedback .feedback__main-client .feedback-item__client-intro .client-address--highlight {
+  color: white;
+}
+@media screen and (max-width: 768px) {
+  .feedback .feedback__main-client .feedback-item__client-intro .client-address {
+    font-size: 0.4167rem;
+  }
+}
+.feedback .feedback__main-client .feedback-item__response {
+  margin-top: 40px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+}
+.feedback .feedback__main-client .feedback-item__response--highlight {
+  color: #FFF;
+}
+.feedback .feedback__main-client .feedback-item__response .highlight {
+  color: #17C2EC;
+}
+@media screen and (max-width: 768px) {
+  .feedback .feedback__main-client .feedback-item__response {
+    font-size: 0.542rem;
+    margin-top: 30.5px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
