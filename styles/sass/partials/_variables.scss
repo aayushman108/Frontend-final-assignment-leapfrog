@@ -1,15 +1,17 @@
 
 //colors
 $primary-color: #17C2EC;
-//$secondary-color: rgba(255, 255, 255, 0.5);
-$secondary-color: black;
+$secondary-color: rgba(255, 255, 255, 0.5);
 $white: #FFF;
 $black: #000;
 
 //devices breakpoint
-$tablet: 992px;
+$tablet: 1200px;
 $mobile: 576px;
 
 //button
 $primary-btn-bg: #17C2EC;
 $secondary-btn-bg: rgba(196, 196, 196, 0.10);
+$tertiary-btn-bg: transparent;
+$hamburger-menu-bg: rgba(196, 196, 196, 0.15);
+

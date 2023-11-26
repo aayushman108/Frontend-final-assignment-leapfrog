@@ -1,0 +1,22 @@
+
+
+.brands{
+    height: 150px;
+    @include d-flex(center, row);
+    align-items: center;
+    background-color: $secondary-color;
+    &__main{
+        @include d-flex(space-between, row);
+        align-items: center;
+        &-item{
+            flex-basis: 22%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

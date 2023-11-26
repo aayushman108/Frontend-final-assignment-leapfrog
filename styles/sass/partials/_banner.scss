@@ -1,0 +1,106 @@
+
+
+.banner{
+    .banner__main{
+        padding-top: 210px;
+        &-top{
+            @include d-flex(space-between, row);
+            &-left{
+                flex-basis: 48%;
+                .banner__title{
+                    font-size: 1rem;
+                    color: $primary-color;
+                }
+                .banner__heading{
+                    color: $white;
+                    margin: 40px 0 50px;
+                    &--highlight{
+                        color: $primary-color;
+                    }
+                }
+                .banner__description{
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: rgba(255, 255, 255, 0.70);
+                    margin-bottom: 50px;
+                }
+                .banner__button{
+                    @include d-flex(flex-start, row);
+                    gap: 20px;
+                    &-left{
+                        @include button;
+                        &--primary{
+                            background-color: $primary-btn-bg;
+                            color: $white;
+                        }
+                    }
+                    &-right{
+                        @include button;
+                        &--secondary{
+                            background-color: $secondary-btn-bg;
+                            color: $white;
+                            border: 2px solid $primary-color;
+                            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                        }
+                    }
+                }
+            }
+            &-right{
+                flex-basis: 46%;
+                .banner__image{
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+        &-bottom{
+            margin-top: 180px;
+            border-radius: 20px 20px 0px 0px;
+            background: rgba(196, 196, 196, 0.05);
+            @include d-flex(space-between, row);
+            align-items: center;
+            padding: 50px 40px;
+            .info__item{
+                @include d-flex(flex-start, row);
+                align-items: center;
+                gap: 20px;
+                &-icon{
+                    width: 50px;
+                    height: 50px;
+                    background-color: $secondary-btn-bg;
+                    border-radius: 10px;
+                    text-align: center;
+                    @include d-flex(center, row);
+                    align-items: center;
+                    .bi{
+                        color: $primary-color;
+                        font-size: 28px;
+                    }
+                }
+                &-info{
+                    &-title{
+                        font-size: 1rem;
+                        font-weight: 600;
+                        color: $secondary-color;
+                    }
+                    &-description{
+                        font-size: 1rem;
+                        font-weight: 700;
+                        color: $white;
+                    }
+                }
+            }
+            &-button{
+                @include button;
+                width: 142px;
+                height: 69px;
+                &--primary{
+                    background-color: $primary-btn-bg;
+                    color: white;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,100 @@
+
+
+.vaccination-promo{
+    &__main{
+        margin: 60px 0 80px;
+        &-title{
+            margin-bottom: 40px;
+            @include d-flex(space-between, row);
+            &-heading{
+                max-width: 504px;
+                font-weight: 700;
+                color: $white;
+            }
+            &-description{
+                max-width: 535px;
+                font-size: 0.833rem;
+                font-weight: 400;
+                color: $secondary-color;
+            }
+        }
+        &-content{
+            @include d-flex(space-between, row);
+            &-left{
+                max-width: 450px;
+                padding: 40px 40px 70px;
+                border-radius: 50px 150px 50px 50px;
+                border: 3px solid rgba(196, 196, 196, 0.20);
+                &:hover{
+                    background-color: rgba(196, 196, 196, 0.20);
+                    border: none;
+                    .bi, .vaccination-title, .vaccination-read-more {
+                        color: $primary-color!important;
+                    }
+
+                }
+                .vaccination-icon{
+                    @include d-flex(center, row);
+                    align-items: center;
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 30px;
+                    background-color: rgba(196, 196, 196, 0.20);
+                    .bi{
+                        font-size: 50px;
+                        color: white;
+                    }
+                }
+                .vaccination-title{
+                    font-size: 1rem;
+                    color: $white;
+                    margin: 40px 0 30px;
+                }
+                .vaccination-description{
+                    font-size: 0.75rem;
+                    font-weight: 500;
+                    color: $white;
+                    margin-bottom: 44px;
+                }
+                .vaccination-read-more{
+                    @include button;
+                    font-size: 0.75rem;
+                    color: $white;
+                    padding: 0;
+                    &--tertiary{
+                        background-color: $tertiary-btn-bg;
+                    }
+                    .bi{
+                        margin-left: 10px;
+                    }
+                }
+            }
+            &-right{
+                @include d-flex(space-between, row);
+                
+                border: 2px solid black;
+                .vaccination-item{
+                    width: 350px;
+                    border: 1px solid red;
+                    &__icon{
+                        @include d-flex(center, row);
+                        align-items: center;
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 21px;
+                        background-color: rgba(196, 196, 196, 0.10);
+                        .bi{
+                            font-size: 35px;
+                            color: white;
+                        }
+                    }
+                    &__title{
+                        font-size: 1rem;
+                        font-weight: 700;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML/CSS Final Assignment</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <!--............bootstrap icons...........-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 </head>
 <body>
+    <!--.......................Header..........................-->
     <header class="header">
         <div class="container">
             <div class="header__main">
-                <h1 class="header__logo">
-                    <a class="header__logo-link" href="#">Vaccination.ng</a>
-                </h1>
+                <a class="header__logo" href="#">Vaccination.ng</a>
                 <div class="header__links">
                     <ul class="header__links-list">
                         <li><a href="#" class="header__link header__link--active">Home</a></li>
@@ -24,11 +25,130 @@
                 <div class="header__button">
                     <button class="header__button-status header__button-status--secondary">Check Status</button>
                 </div>
+                <div class="header__menu">
+                    <button class="header__menu-button"><i class="bi bi-text-right"></i></button>
+                </div>
             </div>
         </div>
     </header>
+    <!--......................main................................-->
     <main>
-        <section class="banner"></section>
+        <!--............banner.............-->
+        <section class="banner">
+            <div class="container">
+                <div class="banner__main">
+                    <div class="banner__main-top">
+                        <div class="banner__main-top-left">
+                            <p class="banner__title">Get Vaccinated. Boost your Immune System</p>
+                            <h1 class="banner__heading">COVID-19 Vaccination Got Easier With, <span class="banner__heading--highlight">Vaccination.ng</span></h1>
+                            <p class="banner__description">Vaccination.ng will help you find the nearest centre for vaccination, in all 36 states in Nigeria.</p>
+                            <div class="banner__button">
+                                <button class="banner__button-left banner__button-left--primary">Get Vaccine</button>
+                                <button class="banner__button-right banner__button-right--secondary">Help Centre</button>
+                            </div>
+                        </div>
+                        <div class="banner__main-top-right">
+                            <div class="banner__image">
+                                <figure>
+                                    <img src="assets/banner-right.png" alt="COVID vaccine" />
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner__main-bottom">
+                        <div class="info__item">
+                            <div class="info__item-icon"><i class="bi bi-geo-alt"></i></div>
+                            <div class="info__item-info">
+                                <p class="info__item-info-title">Location</p>
+                                <p class="info__item-info-description">Ikeja Lagos, Nigeria</p>
+                            </div>
+                        </div>
+                        <div class="info__item">
+                            <div class="info__item-icon"><i class="bi bi-calendar4"></i></div>
+                            <div class="info__item-info">
+                                <p class="info__item-info-title">Date</p>
+                                <p class="info__item-info-description">29 February, 2022</p>
+                            </div>
+                        </div>
+                        <div class="info__item">
+                            <div class="info__item-icon"><i class="bi bi-shield"></i></div>
+                            <div class="info__item-info">
+                                <p class="info__item-info-title">Vaccine Type</p>
+                                <p class="info__item-info-description">Mordena</p>
+                            </div>
+                        </div>
+                        <button class="banner__main-bottom-button banner__main-bottom-button--primary">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--............brands..............-->
+        <section class="brands">
+            <div class="container">
+                <div class="brands__main">
+                    <div class="brands__main-item">
+                        <figure>
+                            <img src="assets/moderna.png" alt="Moderna logo" />
+                        </figure>
+                    </div>
+                    <div class="brands__main-item">
+                        <figure>
+                            <img src="assets/pfizer.png" alt="Pfizer logo" />
+                        </figure>
+                    </div>
+                    <div class="brands__main-item">
+                        <figure>
+                            <img src="assets/astrazeneca.png" alt="Astrazeneca logo" />
+                        </figure>
+                    </div>
+                    <div class="brands__main-item">
+                        <figure>
+                            <img src="assets/sinovac.png" alt="Sinovac logo" />
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--............result-check...........-->
+        <!--<section class="result-check">
+            <div class="container">
+                <div class="result-check__main">
+                    <h2>Check your COVID-19 result on our Database</h2>
+
+                </div>
+            </div>
+        </section>-->
+        <!--.............vaccination-promo-->
+        <section class="vaccination-promo">
+            <div class="container">
+                <div class="vaccination-promo__main">
+                    <div class="vaccination-promo__main-title">
+                        <h1 class="vaccination-promo__main-title-heading">Why get vaccinated today?</h1>
+                        <p class="vaccination-promo__main-title-description">Magna adipiscing at elit at ornare lectus nibh lorem. Ac, sed ac lorem pellentesque vestibulum risus matti. In molestie condimentum malesuada non.</p>
+                    </div>
+                    <div class="vaccination-promo__main-content">
+                        <div class="vaccination-promo__main-content-left">
+                            <div class="vaccination-icon"><i class="bi bi-shield"></i></div>
+                            <h2 class="vaccination-title">Protects your immune system against viruses</h2>
+                            <p class="vaccination-description">Velit ut consectetur mauris, orci amet, faucibus.<br /> Sit turpis fringilla ipsum pretium, dictum. Dolor eget vel nulla lorem ac.</p>
+                            <button class="vaccination-read-more vaccination-read-more--tertiary">Read More <i class="bi bi-arrow-right"></i></button>
+                        </div>
+                        <div class="vaccination-promo__main-content-right">
+                            <div class="vaccination-item">
+                                <div class="vaccination-item__icon"><i class="bi bi-people"></i></div>
+                                <h3 class="vaccination-item__title">Minimize the spread of the Virus</h3>
+                                <button class="vaccination-item__read-more vaccination-item__read-more--tertiary">Read More <i class="bi bi-arrow-right"></i></button>
+                            </div>
+                            <div class="vaccination-item">
+                                <div class="vaccination-item__icon"><i class="bi bi-thermometer"></i></div>
+                                <h3 class="vaccination-item__title">Protect yourself</h3>
+                                <button class="vaccination-item__read-more vaccination-item__read-more--tertiary">Read More <i class="bi bi-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>

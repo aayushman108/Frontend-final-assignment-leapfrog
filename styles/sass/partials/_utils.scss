@@ -5,14 +5,26 @@
     flex-direction: $flex-direction;
 }
 
+@mixin tablet {
+    @media screen and (max-width: 1200px) {
+      @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+}
+
 .container{
     max-width: 1300px;
     padding: 0 70px;
     margin: 0 auto;
-    @media screen and (max-width: $tablet) {
+    @include tablet{
         padding: 0 50px;
     }
-    @media screen and (max-width: $mobile) {
+    @include mobile{
         padding: 0 35px;
     }
 }

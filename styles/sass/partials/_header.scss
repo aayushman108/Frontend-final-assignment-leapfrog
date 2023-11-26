@@ -1,38 +1,39 @@
 
 
 .header{
-    border: 2px solid black;
+    padding: 40px 0;
     background-color: transparent;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     &__main{
-        border: 1px solid blue;
         @include d-flex(space-between, row);
         align-items: center;
         .header__logo{
-            &-link{
-                position: relative;
-                font-size: 32px;
-                &:hover{
-                    color: inherit;
-                }
-                &::before{
-                    content: "";
-                    width: 100px;
-                    height: 3px;
-                    background-color: $primary-color;
-                    position: absolute;
-                    left: 0;
-                    top: 100%;
-                }
+            position: relative;
+            font-size: 1.33rem;
+            font-weight: 700;
+            &:hover{
+                color: $white;
+            }
+            &::before{
+                content: "";
+                width: 100px;
+                height: 3px;
+                background-color: $primary-color;
+                position: absolute;
+                left: 0;
+                top: 100%;
             }
         }
+        
         .header__links{
+            @include tablet {
+                display: none;
+            }
             &-list{
                 @include d-flex(flex-start, row);
-                border: 1px solid black;
                 gap: 25px;
             }
             .header__link{
@@ -58,12 +59,32 @@
             }
         }
         .header__button{
+            @include tablet {
+                display: none;
+            }
             &-status{
                 @include button;
                 &--secondary{
                     background-color: $secondary-btn-bg;
                     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
                     color: $primary-color;
+                }
+            }
+        }
+        .header__menu{
+            display: none;
+            @include tablet {
+                display: block;
+            }
+            &-button{
+                width: 45px;
+                height: 45px;
+                border: none;
+                border-radius: 10px;
+                background-color: $hamburger-menu-bg;
+                .bi{
+                    font-size: 35px;
+                    color: $white;
                 }
             }
         }
