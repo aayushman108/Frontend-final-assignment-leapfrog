@@ -17,6 +17,15 @@
     }
 }
 
+@mixin background-image{
+    background-image: url('/assets/hero-bg-image.png');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .container{
     max-width: 1300px;
     padding: 0 70px;

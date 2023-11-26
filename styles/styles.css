@@ -167,6 +167,14 @@ a:hover {
   color: #FFF;
 }
 
+.banner {
+  background-image: url("/assets/hero-bg-image.png");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .banner .banner__main {
   padding-top: 210px;
 }
@@ -326,8 +334,24 @@ a:hover {
   height: auto;
 }
 
-.vaccination-promo__main {
-  margin: 60px 0 80px;
+.vaccination-promo {
+  padding: 60px 0 80px;
+  background-image: url("/assets/hero-bg-image.png");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 1200px) {
+  .vaccination-promo {
+    padding: 58px 0 45px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .vaccination-promo {
+    padding: 42px 0;
+  }
 }
 .vaccination-promo__main-title {
   margin-bottom: 40px;
@@ -335,6 +359,22 @@ a:hover {
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: row;
+}
+@media screen and (max-width: 1200px) {
+  .vaccination-promo__main-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 50px;
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .vaccination-promo__main-title {
+    gap: 17px;
+    margin-bottom: 40px;
+  }
 }
 .vaccination-promo__main-title-heading {
   max-width: 504px;
@@ -347,21 +387,45 @@ a:hover {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.5);
 }
+@media screen and (max-width: 768px) {
+  .vaccination-promo__main-title-description {
+    font-size: 0.583rem;
+  }
+}
 .vaccination-promo__main-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: row;
 }
+@media screen and (max-width: 1200px) {
+  .vaccination-promo__main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+}
 .vaccination-promo__main-content-left {
-  max-width: 450px;
+  flex-basis: 35%;
   padding: 40px 40px 70px;
   border-radius: 50px 150px 50px 50px;
   border: 3px solid rgba(196, 196, 196, 0.2);
 }
+@media screen and (max-width: 1200px) {
+  .vaccination-promo__main-content-left {
+    max-width: 450px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .vaccination-promo__main-content-left {
+    padding: 20px;
+    border-radius: 20px 80px 20px 20px;
+    max-width: 276px;
+  }
+}
 .vaccination-promo__main-content-left:hover {
   background-color: rgba(196, 196, 196, 0.2);
-  border: none;
 }
 .vaccination-promo__main-content-left:hover .bi, .vaccination-promo__main-content-left:hover .vaccination-title, .vaccination-promo__main-content-left:hover .vaccination-read-more {
   color: #17C2EC !important;
@@ -377,20 +441,41 @@ a:hover {
   border-radius: 30px;
   background-color: rgba(196, 196, 196, 0.2);
 }
+@media screen and (max-width: 768px) {
+  .vaccination-promo__main-content-left .vaccination-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
 .vaccination-promo__main-content-left .vaccination-icon .bi {
   font-size: 50px;
   color: white;
+}
+@media screen and (max-width: 768px) {
+  .vaccination-promo__main-content-left .vaccination-icon .bi {
+    font-size: 25px;
+  }
 }
 .vaccination-promo__main-content-left .vaccination-title {
   font-size: 1rem;
   color: #FFF;
   margin: 40px 0 30px;
 }
+@media screen and (max-width: 768px) {
+  .vaccination-promo__main-content-left .vaccination-title {
+    font-size: 0.583rem;
+  }
+}
 .vaccination-promo__main-content-left .vaccination-description {
   font-size: 0.75rem;
   font-weight: 500;
   color: #FFF;
   margin-bottom: 44px;
+}
+@media screen and (max-width: 768px) {
+  .vaccination-promo__main-content-left .vaccination-description {
+    font-size: 0.5rem;
+  }
 }
 .vaccination-promo__main-content-left .vaccination-read-more {
   border-radius: 20px;
@@ -401,8 +486,21 @@ a:hover {
   cursor: pointer;
   border: none;
   font-size: 0.75rem;
-  color: #FFF;
+  color: rgba(255, 255, 255, 0.5);
   padding: 0;
+}
+@media screen and (max-width: 768px) {
+  .vaccination-promo__main-content-left .vaccination-read-more {
+    font-size: 0.5rem;
+  }
+}
+.vaccination-promo__main-content-left .vaccination-read-more:hover .bi {
+  margin-left: 15px;
+}
+@media screen and (max-width: 768px) {
+  .vaccination-promo__main-content-left .vaccination-read-more:hover .bi {
+    margin-left: 10px;
+  }
 }
 .vaccination-promo__main-content-left .vaccination-read-more--tertiary {
   background-color: transparent;
@@ -410,16 +508,71 @@ a:hover {
 .vaccination-promo__main-content-left .vaccination-read-more .bi {
   margin-left: 10px;
 }
+@media screen and (max-width: 768px) {
+  .vaccination-promo__main-content-left .vaccination-read-more .bi {
+    margin-left: 7px;
+  }
+}
 .vaccination-promo__main-content-right {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: row;
-  border: 2px solid black;
+  align-content: end;
+  flex-basis: 60%;
+  gap: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .vaccination-promo__main-content-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .vaccination-promo__main-content-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+    align-self: flex-start;
+  }
 }
 .vaccination-promo__main-content-right .vaccination-item {
-  width: 350px;
-  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 350px;
+  flex-basis: 45%;
+  border: 3px solid rgba(196, 196, 196, 0.2);
+  border-radius: 50px;
+  padding: 40px 40px 60px;
+}
+@media screen and (max-width: 1200px) {
+  .vaccination-promo__main-content-right .vaccination-item {
+    max-width: 296px;
+    height: 290px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .vaccination-promo__main-content-right .vaccination-item {
+    max-width: 188px;
+    border-radius: 20px;
+    padding: 20px;
+    height: 202px;
+  }
+}
+.vaccination-promo__main-content-right .vaccination-item:hover {
+  background-color: rgba(196, 196, 196, 0.2);
+}
+.vaccination-promo__main-content-right .vaccination-item:hover .bi, .vaccination-promo__main-content-right .vaccination-item:hover .vaccination-item__title, .vaccination-promo__main-content-right .vaccination-item:hover .vaccination-item__read-more {
+  color: #17C2EC !important;
 }
 .vaccination-promo__main-content-right .vaccination-item__icon {
   display: flex;
@@ -432,14 +585,159 @@ a:hover {
   border-radius: 21px;
   background-color: rgba(196, 196, 196, 0.1);
 }
+@media screen and (max-width: 768px) {
+  .vaccination-promo__main-content-right .vaccination-item__icon {
+    width: 50px;
+    height: 50px;
+  }
+}
 .vaccination-promo__main-content-right .vaccination-item__icon .bi {
   font-size: 35px;
   color: white;
+}
+@media screen and (max-width: 768px) {
+  .vaccination-promo__main-content-right .vaccination-item__icon .bi {
+    font-size: 25px;
+  }
 }
 .vaccination-promo__main-content-right .vaccination-item__title {
   font-size: 1rem;
   font-weight: 700;
   color: #FFF;
+}
+@media screen and (max-width: 1200px) {
+  .vaccination-promo__main-content-right .vaccination-item__title {
+    font-size: 0.833rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .vaccination-promo__main-content-right .vaccination-item__title {
+    font-size: 0.583rem;
+    margin: 30px 0 20px;
+  }
+}
+.vaccination-promo__main-content-right .vaccination-item__read-more {
+  border-radius: 20px;
+  padding: 20px 25px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  align-self: baseline;
+  padding: 0;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+@media screen and (max-width: 1200px) {
+  .vaccination-promo__main-content-right .vaccination-item__read-more {
+    font-size: 0.833rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .vaccination-promo__main-content-right .vaccination-item__read-more {
+    font-size: 0.583rem;
+  }
+}
+.vaccination-promo__main-content-right .vaccination-item__read-more:hover .bi {
+  margin-left: 15px;
+}
+@media screen and (max-width: 768px) {
+  .vaccination-promo__main-content-right .vaccination-item__read-more:hover .bi {
+    margin-left: 10px;
+  }
+}
+.vaccination-promo__main-content-right .vaccination-item__read-more--tertiary {
+  background-color: transparent;
+}
+.vaccination-promo__main-content-right .vaccination-item__read-more .bi {
+  margin-left: 10px;
+}
+@media screen and (max-width: 768px) {
+  .vaccination-promo__main-content-right .vaccination-item__read-more .bi {
+    margin-left: 7px;
+  }
+}
+
+.covid-prevention {
+  background-image: url("/assets/hero-bg-image.png");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 70px 30px 0 30px;
+  text-align: center;
+}
+@media screen and (max-width: 1200px) {
+  .covid-prevention {
+    padding: 40px 10px 0 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .covid-prevention {
+    padding: 25px 6px 0 6px;
+  }
+}
+.covid-prevention__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFF;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .covid-prevention__title {
+    font-size: 0.833rem;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .covid-prevention__title {
+    font-size: 0.5rem;
+    margin-bottom: 10px;
+  }
+}
+.covid-prevention__heading {
+  color: #FFF;
+  margin-bottom: 40px;
+  font-weight: 800;
+}
+.covid-prevention__heading--highlight {
+  color: #17C2EC;
+}
+@media screen and (max-width: 768px) {
+  .covid-prevention__heading {
+    margin-bottom: 10px;
+  }
+}
+.covid-prevention__description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  width: 66%;
+  margin: 0 auto;
+  margin-bottom: 180px;
+}
+@media screen and (max-width: 1200px) {
+  .covid-prevention__description {
+    font-size: 0.75rem;
+    margin-bottom: 60px;
+    width: 72%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .covid-prevention__description {
+    font-size: 0.5rem;
+    margin-bottom: 30px;
+    width: 79%;
+  }
+}
+.covid-prevention__image {
+  width: 100%;
+  height: auto;
+}
+.covid-prevention__image img {
+  width: 100%;
+  height: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */

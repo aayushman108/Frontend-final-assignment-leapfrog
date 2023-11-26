@@ -1,0 +1,63 @@
+
+
+.covid-prevention{
+    @include background-image;
+    padding: 70px 30px 0 30px;
+    text-align: center;
+    @include tablet{
+        padding: 40px 10px 0 10px;
+    }
+    @include mobile{
+        padding: 25px 6px 0 6px;
+    }
+    &__title{
+        font-size: 1rem;
+        font-weight: 700;
+        color: $white;
+        margin-bottom: 20px;
+        @include tablet{
+            font-size: 0.833rem;
+            margin-bottom: 10px;
+        }
+        @include mobile{
+            font-size: 0.5rem;
+            margin-bottom: 10px;
+        }
+    }
+    &__heading{
+        color: $white;
+        margin-bottom: 40px;
+        font-weight: 800;
+        &--highlight{
+            color: $primary-color;
+        }
+        @include mobile{
+            margin-bottom: 10px;
+        }
+    }
+    &__description{
+        font-size: 1rem;
+        color: $secondary-color;
+        width: 66%;
+        margin: 0 auto;
+        margin-bottom: 180px;
+        @include tablet{
+            font-size: 0.75rem;
+            margin-bottom: 60px;
+            width: 72%;
+        }
+        @include mobile{
+            font-size: 0.5rem;
+            margin-bottom: 30px;
+            width: 79%;
+        }
+    }
+    &__image{
+        width: 100%;
+        height: auto;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}

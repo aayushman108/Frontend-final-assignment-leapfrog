@@ -1,6 +1,7 @@
 
 
 .banner{
+    @include background-image;
     .banner__main{
         padding-top: 210px;
         &-top{
