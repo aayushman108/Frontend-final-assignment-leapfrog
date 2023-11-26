@@ -1,6 +1,7 @@
 
 
 .footer{
+    position: relative;
     @include background-image;
     height: 500px;
     @include mobile{
@@ -8,10 +9,109 @@
     }
     &__main{
         &-newsletter{
+            position: absolute;
+            top: -217.5px;
+            left: 50%;
+            transform: translate(-50%, 0);
             width: 1067px;
             height: 435px;
-            margin: 0 auto;
-            border: 2px solid red;
+            border-radius: 50px;
+            background-color: rgba(196, 196, 196, 0.15);
+            @include tablet{
+                width: 709px;
+                height: 320px;
+                top: -160px;
+            }
+            @include mobile{
+                width: 320px;
+                height: 206px;
+                border-radius: 20px;
+                top: -103px;
+            }
+            &-content{
+                text-align: center;
+                color: $white;
+                position: absolute;
+                top: 17.5px;
+                left: 50%;
+                width: 1031px;
+                height: 400px;
+                transform: translate(-50%, 0);
+                border-radius: 50px;
+                background-color: $primary-color;
+                @include tablet{
+                    width: 659px;
+                    height: 263px;
+                    top: 28.5px;
+                }
+                @include mobile{
+                    width: 300px;
+                    height: 147px;
+                    border-radius: 10px;
+                    top: 29.5px;
+                }
+                .newsletter__heading{
+                    font-size: 2rem;
+                    font-weight: 700;
+                    margin: 70px auto 20px;
+                    @include tablet{
+                        font-size: 1.5rem;
+                        margin: 16px auto 20px;
+                    }
+                    @include mobile{
+                        font-size: 0.75rem;
+                        margin: 16px auto 5px;
+                    }
+                }
+                .newsletter__description{
+                    font-size: 1rem;
+                    font-weight: 500;
+                    margin-bottom: 40px;
+                    @include tablet{
+                        font-size: 0.833rem;
+                        margin-bottom: 28px;
+                    }
+                    @include mobile{
+                        font-size: 0.4167rem;
+                        margin-bottom: 24px;
+                    }
+                }
+                .newsletter__connect{
+                    @include d-flex(center, row);
+                    input{
+                        width: 450px;
+                        height: 75px;
+                        border: none;
+                        outline: none;
+                        border-radius: 30px 0 0 30px;
+                        font-size: 0.833rem;
+                        padding: 28.5px 40px;
+                        font-weight: 500;
+                        color: rgba(0, 0, 0, 0.6);
+                        @include mobile{
+                            width: 175px;
+                            height: 40px;
+                            font-size: 0.4167rem;
+                            padding: 12px;
+                        }
+                    }
+                    .newsletter__button{
+                        border: none;
+                        width: 100px;
+                        height: 75px;
+                        border-radius: 0 30px 30px 0;
+                        background-color: #0B153C;
+                        @include mobile{
+                            width: 60px;
+                            height: 40px;
+                            img{
+                                width: 25px;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
         }
         &-links{
             margin-top: 328px;

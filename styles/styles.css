@@ -809,7 +809,7 @@ a:hover {
     justify-content: center;
     flex-direction: column;
     gap: 30px;
-    padding-bottom: 160px;
+    padding-bottom: 180px;
   }
 }
 .feedback .feedback__main-client .feedback-item {
@@ -938,6 +938,7 @@ a:hover {
 }
 
 .footer {
+  position: relative;
   background-image: url("/assets/hero-bg-image.png");
   width: 100%;
   height: 100%;
@@ -953,10 +954,132 @@ a:hover {
   }
 }
 .footer__main-newsletter {
+  position: absolute;
+  top: -217.5px;
+  left: 50%;
+  transform: translate(-50%, 0);
   width: 1067px;
   height: 435px;
-  margin: 0 auto;
-  border: 2px solid red;
+  border-radius: 50px;
+  background-color: rgba(196, 196, 196, 0.15);
+}
+@media screen and (max-width: 1200px) {
+  .footer__main-newsletter {
+    width: 709px;
+    height: 320px;
+    top: -160px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__main-newsletter {
+    width: 320px;
+    height: 206px;
+    border-radius: 20px;
+    top: -103px;
+  }
+}
+.footer__main-newsletter-content {
+  text-align: center;
+  color: #FFF;
+  position: absolute;
+  top: 17.5px;
+  left: 50%;
+  width: 1031px;
+  height: 400px;
+  transform: translate(-50%, 0);
+  border-radius: 50px;
+  background-color: #17C2EC;
+}
+@media screen and (max-width: 1200px) {
+  .footer__main-newsletter-content {
+    width: 659px;
+    height: 263px;
+    top: 28.5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__main-newsletter-content {
+    width: 300px;
+    height: 147px;
+    border-radius: 10px;
+    top: 29.5px;
+  }
+}
+.footer__main-newsletter-content .newsletter__heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 70px auto 20px;
+}
+@media screen and (max-width: 1200px) {
+  .footer__main-newsletter-content .newsletter__heading {
+    font-size: 1.5rem;
+    margin: 16px auto 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__main-newsletter-content .newsletter__heading {
+    font-size: 0.75rem;
+    margin: 16px auto 5px;
+  }
+}
+.footer__main-newsletter-content .newsletter__description {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 1200px) {
+  .footer__main-newsletter-content .newsletter__description {
+    font-size: 0.833rem;
+    margin-bottom: 28px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__main-newsletter-content .newsletter__description {
+    font-size: 0.4167rem;
+    margin-bottom: 24px;
+  }
+}
+.footer__main-newsletter-content .newsletter__connect {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+}
+.footer__main-newsletter-content .newsletter__connect input {
+  width: 450px;
+  height: 75px;
+  border: none;
+  outline: none;
+  border-radius: 30px 0 0 30px;
+  font-size: 0.833rem;
+  padding: 28.5px 40px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+}
+@media screen and (max-width: 768px) {
+  .footer__main-newsletter-content .newsletter__connect input {
+    width: 175px;
+    height: 40px;
+    font-size: 0.4167rem;
+    padding: 12px;
+  }
+}
+.footer__main-newsletter-content .newsletter__connect .newsletter__button {
+  border: none;
+  width: 100px;
+  height: 75px;
+  border-radius: 0 30px 30px 0;
+  background-color: #0B153C;
+}
+@media screen and (max-width: 768px) {
+  .footer__main-newsletter-content .newsletter__connect .newsletter__button {
+    width: 60px;
+    height: 40px;
+  }
+  .footer__main-newsletter-content .newsletter__connect .newsletter__button img {
+    width: 25px;
+    height: auto;
+  }
 }
 .footer__main-links {
   margin-top: 328px;

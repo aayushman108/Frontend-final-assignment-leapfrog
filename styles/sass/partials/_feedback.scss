@@ -51,7 +51,7 @@
             @include tablet{
                 @include d-flex(center, column);
                 gap: 30px;
-                padding-bottom: 160px;
+                padding-bottom: 180px;
             }
             .feedback-item{
                 max-width: 32%;
