@@ -2,7 +2,7 @@
 
 .registration{
     @include background-image;
-    background-image: url("/assets/feedback-bg.png");
+    background-image: url("assets/feedback-bg.png");
     &__main{
         &-heading{
             display: none;

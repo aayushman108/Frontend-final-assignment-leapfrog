@@ -2,7 +2,7 @@
 
 .feedback{
     @include background-image;
-    background-image: url("/assets/feedback-bg.png");
+    background-image: url("assets/feedback-bg.png");
     .feedback__main{
         text-align: center;
         &-title{
@@ -77,7 +77,7 @@
                     transform: translate(-50%, -60%);
                     width: 294px;
                     height: 478px;
-                    background-image: url('/assets/covid-vaccine.png');
+                    background-image: url('assets/covid-vaccine.png');
                     background-size: contain;
                     background-position: center;
                     background-repeat: no-repeat;
