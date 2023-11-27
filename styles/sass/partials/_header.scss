@@ -7,6 +7,9 @@
     top: 0;
     left: 0;
     width: 100%;
+    @include tablet{
+        padding: 50px 0;
+    }
     &__main{
         @include d-flex(space-between, row);
         align-items: center;
@@ -15,6 +18,12 @@
             font-size: 1.33rem;
             font-weight: 700;
             color: white;
+            @include tablet{
+                font-size: 1.0625rem;
+            }
+            @include mobile{
+                font-size: 0.75rem;
+            }
             &::before{
                 content: "";
                 width: 100px;
@@ -23,6 +32,10 @@
                 position: absolute;
                 left: 0;
                 top: calc(100% + 5px);
+                @include tablet{
+                    width: 80px;
+                    height: 2.4px;
+                }
             }
         }
         
@@ -78,6 +91,9 @@
                 border: none;
                 border-radius: 10px;
                 background-color: $hamburger-menu-bg;
+                &:hover{
+                    background-color: $hover-button--secondary;
+                }
                 .bi{
                     font-size: 35px;
                     color: $white;

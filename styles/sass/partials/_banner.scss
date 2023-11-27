@@ -4,17 +4,44 @@
     @include background-image;
     .banner__main{
         padding-top: 210px;
+        @include tablet{
+            padding-top: 126px;
+        }
         &-top{
             @include d-flex(space-between, row);
+            @include tablet{
+                @include d-flex(flex-start, column);
+                gap: 55px;
+            }
+            @include mobile{
+                gap: 50px;
+            }
             &-left{
                 flex-basis: 48%;
+                @include tablet{
+                    max-width: 622px;
+                    height: fit-content;
+                }
+                @include mobile{}
                 .banner__title{
                     font-size: 1rem;
                     color: $primary-color;
+                    @include tablet{
+                        font-size: 0.75rem;
+                    }
+                    @include mobile{
+                        font-size: 0.5rem;
+                    }
                 }
                 .banner__heading{
                     color: $white;
                     margin: 40px 0 50px;
+                    @include tablet{
+                        margin: 40px 0 40px;
+                    }
+                    @include mobile{
+                        margin: 20px 0 20px;
+                    }
                     &--highlight{
                         color: $primary-color;
                     }
@@ -24,30 +51,60 @@
                     font-weight: 700;
                     color: rgba(255, 255, 255, 0.70);
                     margin-bottom: 50px;
+                    @include tablet{
+                        font-size: 0.833rem;
+                        margin-bottom: 40px;
+                    }
+                    @include mobile{
+                        font-size: 0.583rem;
+                    }
                 }
                 .banner__button{
                     @include d-flex(flex-start, row);
                     gap: 20px;
-                    &-left{
+                    &-item{
                         @include button;
+                        font-size: 1rem;
+                        height: 69px;
+                        width: 200px;
+                        @include tablet{
+                            font-size: 0.833rem;
+                            width: 175px;
+                            height: 64px;
+                        }
+                        @include mobile{
+                            font-size: 0.583rem;
+                            height: 55px;
+                            width: 138px;
+                        }
                         &--primary{
                             background-color: $primary-btn-bg;
                             color: $white;
+                            &:hover{
+                                background-color: $hover-button--primary;
+                            }
                         }
-                    }
-                    &-right{
-                        @include button;
                         &--secondary{
                             background-color: $secondary-btn-bg;
                             color: $white;
                             border: 2px solid $primary-color;
                             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                            &:hover{
+                                background-color: $hover-button--secondary;
+                            }
                         }
                     }
                 }
             }
             &-right{
                 flex-basis: 46%;
+                @include tablet{
+                    max-width: 622px;
+                    height: auto;
+                }
+                @include mobile{
+                    max-width: 310px;
+                }
                 .banner__image{
                     img{
                         width: 100%;
@@ -57,12 +114,23 @@
             }
         }
         &-bottom{
-            margin-top: 180px;
+            margin-top: 60px;
             border-radius: 20px 20px 0px 0px;
             background: rgba(196, 196, 196, 0.05);
             @include d-flex(space-between, row);
+            gap: 30px;
             align-items: center;
             padding: 50px 40px;
+            @include tablet{
+                margin-top: 132px;
+                gap: 45px;
+            }
+            @include mobile{
+                margin-top: 105px;
+                @include d-flex(flex-start, column);
+                align-items: flex-start;
+                gap: 18px;
+            }
             .info__item{
                 @include d-flex(flex-start, row);
                 align-items: center;
@@ -75,9 +143,17 @@
                     text-align: center;
                     @include d-flex(center, row);
                     align-items: center;
+                    @include tablet{}
+                    @include mobile{
+                        width: 30px;
+                        height: 30px;
+                    }
                     .bi{
                         color: $primary-color;
                         font-size: 28px;
+                        @include mobile{
+                            font-size: 18px;
+                        }
                     }
                 }
                 &-info{
@@ -85,11 +161,23 @@
                         font-size: 1rem;
                         font-weight: 600;
                         color: $secondary-color;
+                        @include tablet{
+                            font-size: 0.833rem;
+                        }
+                        @include mobile{
+                            font-size: 0.583rem;
+                        }
                     }
                     &-description{
                         font-size: 1rem;
                         font-weight: 700;
                         color: $white;
+                        @include tablet{
+                            font-size: 0.833rem;
+                        }
+                        @include mobile{
+                            font-size: 0.583rem;
+                        }
                     }
                 }
             }
@@ -97,9 +185,23 @@
                 @include button;
                 width: 142px;
                 height: 69px;
+                font-size: 1rem;
+                @include tablet{
+                    width: 250px;
+                    height: 64px;
+                    font-size: 0.833rem;
+                }
+                @include mobile{
+                    width: 150px;
+                    height: 55px;
+                    font-size: 0.583rem;
+                }
                 &--primary{
                     background-color: $primary-btn-bg;
                     color: white;
+                    &:hover{
+                        background-color: $hover-button--primary;
+                    }
                 }
             }
         }
