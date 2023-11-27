@@ -182,7 +182,7 @@ a:hover {
 }
 
 .banner {
-  background-image: url("/assets/hero-bg-image.png");
+  background-image: url("../assets/hero-bg-image.png");
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -499,7 +499,7 @@ a:hover {
 
 .vaccination-promo {
   padding: 60px 0 80px;
-  background-image: url("/assets/hero-bg-image.png");
+  background-image: url("../assets/hero-bg-image.png");
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -824,7 +824,7 @@ a:hover {
 }
 
 .covid-prevention {
-  background-image: url("/assets/hero-bg-image.png");
+  background-image: url("../assets/hero-bg-image.png");
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -906,14 +906,14 @@ a:hover {
 }
 
 .registration {
-  background-image: url("/assets/hero-bg-image.png");
+  background-image: url("../assets/hero-bg-image.png");
   width: 100%;
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   z-index: -2;
-  background-image: url("/assets/feedback-bg.png");
+  background-image: url("../assets/feedback-bg.png");
 }
 .registration__main-heading {
   display: none;
@@ -1053,7 +1053,7 @@ a:hover {
   }
 }
 .registration__main-content-left .registration__input-verify input[type=number] {
-  max-width: 400px;
+  min-width: 400px;
   line-height: 70px;
 }
 .registration__main-content-left .registration__input-verify .verify {
@@ -1064,6 +1064,7 @@ a:hover {
   font-weight: 700;
   cursor: pointer;
   border: none;
+  text-align: center;
   background-color: #17C2EC;
   color: #FFF;
   font-size: 1rem;
@@ -1079,7 +1080,7 @@ a:hover {
   .registration__main-content-left .registration__input-verify .verify {
     font-size: 0.583rem;
     height: 50px;
-    width: 150px;
+    width: 200px;
   }
 }
 .registration__main-content-left .registration__submit {
@@ -1152,14 +1153,14 @@ a:hover {
 }
 
 .feedback {
-  background-image: url("/assets/hero-bg-image.png");
+  background-image: url("../assets/hero-bg-image.png");
   width: 100%;
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   z-index: -2;
-  background-image: url("/assets/feedback-bg.png");
+  background-image: url("../assets/feedback-bg.png");
 }
 .feedback .feedback__main {
   text-align: center;
@@ -1259,7 +1260,7 @@ a:hover {
   transform: translate(-50%, -60%);
   width: 294px;
   height: 478px;
-  background-image: url("/assets/covid-vaccine.png");
+  background-image: url("../assets/covid-vaccine.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1357,7 +1358,7 @@ a:hover {
 
 .footer {
   position: relative;
-  background-image: url("/assets/hero-bg-image.png");
+  background-image: url("../assets/hero-bg-image.png");
   width: 100%;
   height: 100%;
   background-size: cover;
